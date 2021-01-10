@@ -1,20 +1,17 @@
 
+import java.util.Scanner;
+
 public class Loader {
     public static void main(String[] args) {
-        Cat catname = new Cat();
-           System.out.println(catname.randomName() + " весил" + catname.isaArtical() + " : " + catname.getWeight() + " грамм");
-
-           System.out.println(catname.randomName() + " съел" + catname.isaArtical() + " " + catname.eatenFood + " грамм еды");
-
-           System.out.println("После того как " + catname.randomName() + " поел" + catname.isaArtical() + " вес стал таким: " + catname.eatenWeight());
-
            Cat catname1 = new Cat();
-        System.out.println("\n" + "\n" + catname1.randomName() + " весил" + catname1.isaArtical() + " : " + catname1.getWeight() + " грамм " );
-
-        System.out.println(catname1.randomName() + " сходил" + catname1.isaArtical() + " в туалет и потерял столько массы: " + catname1.popped + " грамм ");
-
-        System.out.println("После похода в туалет " + catname1.randomName() + " стал" + catname1.isaArtical() + " весить: " + catname1.wentToTheToilet());
+        System.out.println(catname1.randomName() + " весил" + catname1.isaArtical() + " " + catname1.getWeight());
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Введите число корма ");
+           catname1.feed((int) scanner.nextInt());
+        System.out.println("Введите число корма ещё раз ");
+        catname1.feed((int) scanner.nextInt());
+        System.out.println(catname1.randomName() + " Поел" + catname1.isaArtical() + " и стал" + catname1.isaArtical() + " весить " + catname1.getWeight());
+        catname1.pee();
+        System.out.println("Потом " + catname1.randomName() + " сходил" + catname1.isaArtical() + " в туалет, потерял" + catname1.isaArtical() + " " + catname1.popped + " массы и стал" + catname1.isaArtical() + " весить " + catname1.getWeight() );
     }
 }
-
-
