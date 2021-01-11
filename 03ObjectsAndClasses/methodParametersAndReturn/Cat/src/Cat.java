@@ -3,19 +3,26 @@ public class Cat
 {
     private double originWeight;
     private double weight;
+    
     private double minWeight;
     private double maxWeight;
+    
     private double eatenFood;
     private double popped;
-    private   int randomCountToName;
+    
+    private int randomCountToName;
+    
     private String nameMurka = "Кошка Мурка";
     private String nameVasya = "Кот Вася";
     private String nameJenya = "Кошка Женя";
     private String nameTimothy = "Кот Тимофей";
+    
     private String name;
+    
     private String Artical = "";
+    
     private String toileVoce;
-
+    
     public String pee()
     {
         weight = weight - popped;
@@ -63,10 +70,10 @@ public class Cat
         System.out.println("Meow");
     }
 
-    public void feed(int amount)
+    public int feed(int amount)
     {
         weight = weight + amount;
-
+        return amount;
     }
 
     public String getStatus()
