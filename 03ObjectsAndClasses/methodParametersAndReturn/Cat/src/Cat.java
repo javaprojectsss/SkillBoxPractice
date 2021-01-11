@@ -1,19 +1,26 @@
+
 public class Cat
 {
     private double originWeight;
-    public double weight;
+    private double weight;
     private double minWeight;
     private double maxWeight;
-    public double eatenFood;
-    public double popped;
-    public  int randomCountToName;
-    public String nameMurka = "Кошка Мурка";
-    public String nameVasya = "Кот Вася";
-    public String nameJenya = "Кошка Женя";
-    public String nameTimothy = "Кот Тимофей";
-    public String name;
-    public boolean a = false;
-    public String Artical = "";
+    private double eatenFood;
+    private double popped;
+    private   int randomCountToName;
+    private String nameMurka = "Кошка Мурка";
+    private String nameVasya = "Кот Вася";
+    private String nameJenya = "Кошка Женя";
+    private String nameTimothy = "Кот Тимофей";
+    private String name;
+    private String Artical = "";
+    private String toileVoce;
+
+    public String pee()
+    {
+        weight = weight - popped;
+        return toileVoce;
+    }
 
     public Cat()
     {
@@ -23,12 +30,8 @@ public class Cat
         maxWeight = 9000.0;
         popped = Math.random()*200;
         randomCountToName = (int) ( Math.random() * 4 );
+        toileVoce = randomName() + " сходил" + isaArtical() + " в туалет, потеряв " + popped + " массы" + "\nИ стал" + isaArtical() + " весить";
     }
-
-    public void pee()
-        {
-            weight = weight - popped;
-        }
 
     public String randomName() {
         if (randomCountToName == 0) {
