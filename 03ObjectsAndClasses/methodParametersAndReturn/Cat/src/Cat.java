@@ -23,10 +23,10 @@ public class Cat
     
     private String toileVoce;
     
-    public String pee()
+    public void pee()
     {
         weight = weight - popped;
-        return toileVoce;
+        System.out.println(randomName() + " сходил" + isaArtical() + " в туалет, потеряв " + popped + " массы" + "\nИ стал" + isaArtical() + " весить")
     }
 
     public Cat()
@@ -37,7 +37,7 @@ public class Cat
         maxWeight = 9000.0;
         popped = Math.random()*200;
         randomCountToName = (int) ( Math.random() * 4 );
-        toileVoce = randomName() + " сходил" + isaArtical() + " в туалет, потеряв " + popped + " массы" + "\nИ стал" + isaArtical() + " весить";
+       
     }
 
     public String randomName() {
