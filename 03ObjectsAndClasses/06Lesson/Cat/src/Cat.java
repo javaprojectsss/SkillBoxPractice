@@ -1,21 +1,37 @@
-public class Cat
-{
+import java.util.Scanner;
+
+public class Cat {
     private double originWeight;
     private double weight;
 
-    public static final int EYES_COUNT = 2;
-    public static final double MAXIMAL_WEIGHT = 9000.0;
-    public static final double MINIMAL_WEIGHT = 1000.0;
+    private double minWeight;
+    private double maxWeight;
 
+    public static double cmdWeight = 0.0;
+    public Scanner scanner = new Scanner(System.in);
 
-    public void catCollour(CatCollours collur){}
-
-    public Cat()
-    {
+    public Cat() {
         weight = 1500.0 + 3000.0 * Math.random();
         originWeight = weight;
+        minWeight = 1000.0;
+        maxWeight = 9000.0;
 
     }
+
+    public Cat(double scanner1) {
+        scanner1 = this.scanner.nextDouble();
+        cmdWeight = scanner1;
+
+    }
+
+    public double getCmdWeight()
+    {
+
+        return cmdWeight;
+
+    }
+
+
 
     public void meow()
     {
@@ -40,10 +56,10 @@ public class Cat
 
     public String getStatus()
     {
-        if(weight < MINIMAL_WEIGHT) {
+        if(weight < minWeight) {
             return "Dead";
         }
-        else if(weight > MAXIMAL_WEIGHT) {
+        else if(weight > maxWeight) {
             return "Exploded";
         }
         else if(weight > originWeight) {

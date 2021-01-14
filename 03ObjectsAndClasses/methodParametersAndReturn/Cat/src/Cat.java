@@ -3,18 +3,31 @@ public class Cat
 {
     private double originWeight;
     private double weight;
+
     private double minWeight;
     private double maxWeight;
-    public double eatenFood;
-    public double popped;
-    public  int randomCountToName;
-    public String nameMurka = "Кошка Мурка";
-    public String nameVasya = "Кот Вася";
-    public String nameJenya = "Кошка Женя";
-    public String nameTimothy = "Кот Тимофей";
-    public String name;
-    public boolean a = false;
-    public String Artical = "";
+
+    private double eatenFood;
+    private double popped;
+
+    private int randomCountToName;
+
+    private String nameMurka = "Кошка Мурка";
+    private String nameVasya = "Кот Вася";
+    private String nameJenya = "Кошка Женя";
+    private String nameTimothy = "Кот Тимофей";
+
+    private String name;
+
+    private String Artical = "";
+
+    private String toileVoce;
+
+    public String pee()
+    {
+        weight = weight - popped;
+        return toileVoce;
+    }
 
     public Cat()
     {
@@ -22,14 +35,10 @@ public class Cat
         originWeight = weight;
         minWeight = 1000.0;
         maxWeight = 9000.0;
-        eatenFood = Math.random()*100;
         popped = Math.random()*200;
         randomCountToName = (int) ( Math.random() * 4 );
+        toileVoce = randomName() + " сходил" + isaArtical() + " в туалет, потеряв " + popped + " массы" + "\nИ стал" + isaArtical() + " весить";
     }
-
-    public double wentToTheToilet(){ return weight - popped; }
-
-    public double eatenWeight() { return weight + eatenFood; }
 
     public String randomName() {
         if (randomCountToName == 0) {
@@ -61,14 +70,10 @@ public class Cat
         System.out.println("Meow");
     }
 
-    public void drink(Double amount)
+    public int feed(int amount)
     {
         weight = weight + amount;
-    }
-
-    public Double getWeight()
-    {
-        return weight;
+        return amount;
     }
 
     public String getStatus()
@@ -85,5 +90,9 @@ public class Cat
         else {
             return "Playing";
         }
+    }
+    public Double getWeight()
+    {
+        return weight;
     }
 }
