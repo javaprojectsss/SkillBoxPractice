@@ -1,3 +1,4 @@
+
 public class Cat
 {
     private double originWeight;

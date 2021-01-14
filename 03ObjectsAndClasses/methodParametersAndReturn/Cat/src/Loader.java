@@ -18,6 +18,6 @@ public class Loader {
         catname1.feed((int) scanner1.nextInt());
 
         System.out.println(catname1.randomName() + " Поел" + catname1.isaArtical() + " и стал" + catname1.isaArtical() + " весить " + catname1.getWeight());
-        System.out.println(catname1.pee() + " " + catname1.getWeight());
+        catname1.pee
     }
 }
