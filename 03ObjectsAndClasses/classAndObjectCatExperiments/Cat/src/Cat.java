@@ -1,34 +1,41 @@
+import java.util.Scanner;
 
-public class Cat
-{
-
+public class Cat {
     private double originWeight;
     private double weight;
 
     private double minWeight;
     private double maxWeight;
 
-    public Cat()
-    {
+    private double cmdWeight = 0.0;
+
+    public Cat() {
         weight = 1500.0 + 3000.0 * Math.random();
         originWeight = weight;
-        minWeight = 999.0;
+        minWeight = 1000.0;
         maxWeight = 9000.0;
 
     }
 
-    public Double getMinWeight()
-
-    {
-
-        return minWeight;
+    public Cat(double cmdWeight) {
+        this.cmdWeight = cmdWeight;
 
     }
-    public Double meow() {
-       weight = weight - 1;
-        return weight;
-        }
 
+    public double getCmdWeight()
+    {
+
+        return cmdWeight;
+
+    }
+
+
+
+    public void meow()
+    {
+        weight = weight - 1;
+        System.out.println("Meow");
+    }
 
     public void feed(Double amount)
     {
@@ -60,4 +67,4 @@ public class Cat
             return "Playing";
         }
     }
-} //
+}
