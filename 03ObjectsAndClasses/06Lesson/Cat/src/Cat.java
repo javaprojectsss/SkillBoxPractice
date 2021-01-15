@@ -7,8 +7,7 @@ public class Cat {
     private double minWeight;
     private double maxWeight;
 
-    public static double cmdWeight = 0.0;
-    public Scanner scanner = new Scanner(System.in);
+    private double cmdWeight = 0.0;
 
     public Cat() {
         weight = 1500.0 + 3000.0 * Math.random();
@@ -18,9 +17,8 @@ public class Cat {
 
     }
 
-    public Cat(double scanner1) {
-        scanner1 = this.scanner.nextDouble();
-        cmdWeight = scanner1;
+    public Cat(double cmdWeight) {
+        this.cmdWeight = cmdWeight;
 
     }
 
