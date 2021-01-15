@@ -1,37 +1,23 @@
-import java.util.Scanner;
 
-public class Cat {
+public class Cat
+{
     private double originWeight;
     private double weight;
 
     private double minWeight;
     private double maxWeight;
 
-    public static double cmdWeight = 0.0;
-    public Scanner scanner = new Scanner(System.in);
+    private String colour = "калико";
+    private String colour1 = "дымчатый";
 
-    public Cat() {
+    public Cat()
+    {
         weight = 1500.0 + 3000.0 * Math.random();
         originWeight = weight;
         minWeight = 1000.0;
         maxWeight = 9000.0;
 
     }
-
-    public Cat(double scanner1) {
-        scanner1 = this.scanner.nextDouble();
-        cmdWeight = scanner1;
-
-    }
-
-    public double getCmdWeight()
-    {
-
-        return cmdWeight;
-
-    }
-
-
 
     public void meow()
     {
@@ -69,4 +55,25 @@ public class Cat {
             return "Playing";
         }
     }
+
+    public void setColour(String colour)
+    {
+        this.colour = colour;
+    }
+
+    public void setColour1(String colour1)
+    {
+        this.colour1 = colour1;
+    }
+
+    public String getColour()
+        {
+        return colour;
+        }
+
+    public String getColour1()
+    {
+        return colour1;
+    }
+
 }
